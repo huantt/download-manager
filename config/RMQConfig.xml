@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rmq-config>
+
+	<consumer>	
+		<exchange-declare type="topic" durable="true" auto-delete="false">topic_exchange</exchange-declare>
+		<queue-declare durable="true" exclusive="false" auto-delete="false">Test Queue</queue-declare>
+		
+		
+	</consumer>
+	
+</rmq-config>
