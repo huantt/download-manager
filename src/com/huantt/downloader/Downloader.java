@@ -7,13 +7,11 @@ import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Scanner;
 
 /**
  * Created by Huan on 7/5/2016.
  */
 public class Downloader implements Runnable {
-    private RmqExchangeDeclareConfig config;
     private static Logger log = Logger.getLogger(Downloader.class);
 
     private String link;
@@ -32,13 +30,6 @@ public class Downloader implements Runnable {
         this.numOfThread = numOfThrad;
     }
 
-    public Downloader() {
-        config = ConfigFactory.create(RmqExchangeDeclareConfig.class);
-        //auto convert type
-        System.out.println(config.excType());
-        System.out.println(config.isDurable());
-        System.out.println(config.name());
-    }
 
     @Override
     public void run() {
